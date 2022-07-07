@@ -56,6 +56,17 @@ fn watch_lcu(window: Window) {
     });
 }
 
+#[tauri::command]
+fn is_settings_readonly() -> bool {
+    let process_path = get_league_path();
+    
+    if process_path.is_none() {
+        return false;
+    }
+
+    return true;
+}
+
 fn main() {
     let context = tauri::generate_context!();
     tauri::Builder::default()

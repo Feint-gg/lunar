@@ -1,7 +1,12 @@
+import { useEffect } from "react";
 import { useLCU } from "../../lib/lcu";
 
 export default function Footer() {
   const lcu = useLCU();
+
+  useEffect(() => {
+    console.log(lcu)
+  }, [])
 
   return (
     <footer className="border px-3 flex items-center rounded-b bg-primary-100 h-8 bottom-0 sticky">

@@ -33,18 +33,23 @@ export default function SidePanel({ children }: Props) {
         <div className="flex gap-5">
             <div style={{ height: "528px" }} className="w-40" />
             <div className="side-panel">
-                {routes.map((route) => (
-                    <div key={route.name}>
-                        <div className="text-lg">{route.name}</div>
-                        <div className="text-mute text pl-3 flex flex-col">
-                            {route.routes?.map((route) => (
-                                <Link key={route.name} to={route.path}>
-                                    {route.name}
-                                </Link>
-                            ))}
+                <div>
+                    {routes.map((route) => (
+                        <div key={route.name}>
+                            <div className="text-lg">{route.name}</div>
+                            <div className="text-mute text pl-3 flex flex-col">
+                                {route.routes?.map((route) => (
+                                    <Link key={route.name} to={route.path}>
+                                        {route.name}
+                                    </Link>
+                                ))}
+                            </div>
                         </div>
-                    </div>
-                ))}
+                    ))}
+                </div>
+                <div className="pt-20 text-center">
+                    <Link to="/settings" className="">Settings</Link>
+                </div>
             </div>
             <main className="content">
                 {children}
