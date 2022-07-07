@@ -38,10 +38,8 @@ export default function SidePanel({ children }: Props) {
                         <div className="text-lg">{route.name}</div>
                         <div className="text-mute text pl-3 flex flex-col">
                             {route.routes?.map((route) => (
-                                <Link to={route.path}>
-                                    <a key={route.name}>
-                                        {route.name}
-                                    </a>
+                                <Link key={route.name} to={route.path}>
+                                    {route.name}
                                 </Link>
                             ))}
                         </div>

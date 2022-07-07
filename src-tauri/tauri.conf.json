@@ -60,7 +60,10 @@
         "decorations": false,
         "resizable": false,
         "title": "Feint",
-        "width": 800
+        "width": 800,
+        "fileDropEnabled": false,
+        "transparent": false,
+        "center": true
       }
     ]
   }
